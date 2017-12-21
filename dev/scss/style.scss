@@ -1,0 +1,20 @@
+.house-yellow{
+	display: none;
+}
+
+li{
+	&.room_1{
+		//color: red;
+	}
+	&.active{
+		color: red;
+	}
+	&.for-balcon{
+		color: red;
+	}
+	
+	&.active.for-balcon{
+		//color: yellow;
+	}
+	
+}

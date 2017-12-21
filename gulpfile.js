@@ -8,7 +8,7 @@ var gulp 			= require('gulp'),
  	watch 			= require('gulp-watch');
  	cleancss 		= require('gulp-cleancss');
   plumber     = require('gulp-plumber');
-var livereloadPort 	= 37729;
+//var livereloadPort 	= 37729;
 
 
 gulp.task('webserver', function() {
@@ -18,11 +18,11 @@ gulp.task('webserver', function() {
       open: true,
       livereload: {
       enable: true,
-      port: livereloadPort
+      //port: livereloadPort
       }
     }))
     .pipe(plumber())
-    console.log(livereloadPort)
+    //console.log(livereloadPort)
 });
 
 gulp.task('html', function(){
@@ -32,8 +32,8 @@ gulp.task('html', function(){
     	"pretty": true
   }))
   .pipe(gulp.dest('./app/'))
-  gulp.src('./dev/js/*.js')
-	  .pipe(watch ('./dev/js/*.js'))
+  gulp.src('./dev/js/*')
+	  .pipe(watch ('./dev/js/*'))
     .pipe(plumber())
 	  .pipe(gulp.dest('./app/js'))
 });
